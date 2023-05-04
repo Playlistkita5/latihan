@@ -2,14 +2,14 @@
 <html>
 <body>
 <audio id="audioNotifikasi">
-  <source src="audio-autoplay.wav" type="audio/mpeg">
+  <source src="Tulus Cahaya.mp3" type="audio/mpeg">
 </audio>
 <script type="text/javascript">
             window.addEventListener('load', () => {
 				// noinspection JSUnresolvedVariable
 				let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 				let xhr = new XMLHttpRequest();
-				xhr.open('GET', 'audio-autoplay.wav');
+				xhr.open('GET', 'Tulus Cahaya.mp3');
 				xhr.responseType = 'arraybuffer';
 				xhr.addEventListener('load', () => {
 					let playsound = (audioBuffer) => {
