@@ -8,13 +8,10 @@
 <button onclick="playAudio()" type="button">Play Audio</button>
 <button onclick="pauseAudio()" type="button">Pause Audio</button> 
 <script type="text/javascript">
-var el = document.getElementById("audioNotifikasi"); 
-function playAudio() { 
-  el.play(); 
-} 
-function pauseAudio() { 
-  el.pause(); 
-} 
+    function playAudio() {
+        var notifikasi = new Audio("notifikasi.mp3");
+        notifikasi.play();
+    }
 </script>
 </body>
 </html>
