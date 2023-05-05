@@ -27,7 +27,7 @@
 							t.appendChild(document.createTextNode((new Date()).toLocaleString() + ': Sound played'));
 							document.querySelector('.output').appendChild(t);
 							playsound(audioBuffer);
-						}, 1000 + Math.random()*1);
+						}, 1000;
 					};
 
 					audioCtx.decodeAudioData(xhr.response).then(playsound);
