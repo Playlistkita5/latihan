@@ -1,9 +1,18 @@
-<script type="text/javascript">
-            window.addEventListener('load', () => {
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<title>Audio autoplay</title>
+		<script>
+			window.addEventListener('load', () => document.querySelector('.code-container').appendChild(document.createTextNode(document.querySelector('.source-code').innerText)));
+		</script>
+		<script class="source-code">
+			window.addEventListener('load', () => {
 				// noinspection JSUnresolvedVariable
 				let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 				let xhr = new XMLHttpRequest();
-				xhr.open('GET', 'Tulus Cahaya.mp3');
+				xhr.open('GET', 'audio-autoplay.wav');
 				xhr.responseType = 'arraybuffer';
 				xhr.addEventListener('load', () => {
 					let playsound = (audioBuffer) => {
@@ -25,7 +34,16 @@
 				});
 				xhr.send();
 			});
-    
-</script>
+		</script>
+	</head>
+	<body>
+		<h1>Autoplay a music/sound</h1>
+		<p>A splash sound should be played instantly, and replayed at random times without any user interaction.</p>
 		
+		<h2>Source code</h2>
+		<pre><code lang="zxx-js" class="code-container"></code></pre>
 
+		<h2>Output</h2>
+		<div class="output"></div>
+	</body>
+</html>
