@@ -1,8 +1,8 @@
-            window.addEventListener('load', () => {
+window.addEventListener('load', () => {
 				// noinspection JSUnresolvedVariable
 				let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 				let xhr = new XMLHttpRequest();
-				xhr.open('GET', 'Tulus Cahaya.mp3');
+				xhr.open('GET', 'audio-autoplay.wav');
 				xhr.responseType = 'arraybuffer';
 				xhr.addEventListener('load', () => {
 					let playsound = (audioBuffer) => {
@@ -24,4 +24,3 @@
 				});
 				xhr.send();
 			});
-    
